@@ -1,7 +1,8 @@
 /* global Phaser */
 
-// Copyright (c) 2020 Mr. Coxall All rights reserved
-// Created by: Mr. Coxall
+// Copyright (c) 2020 Mr Coxall All rights reserved
+//
+// Created by: Mr Coxall
 // Created on: Sep 2020
 // This is the Splash Scene
 
@@ -13,7 +14,7 @@ class SplashScene extends Phaser.Scene {
    * This method is the constructor.
    */
   constructor() {
-    super({ key: "splashScene" })
+    super({ key: "splashScene" });
   }
 
   /**
@@ -23,7 +24,7 @@ class SplashScene extends Phaser.Scene {
    * @param {object} data - Any data passed via ScenePlugin.add() or ScenePlugin.start().
    */
   init(data) {
-    this.cameras.main.setBackgroundColor("ffffff")
+    this.cameras.main.setBackgroundColor("ffffff");
   }
 
   /**
@@ -31,7 +32,7 @@ class SplashScene extends Phaser.Scene {
    * Use it to load assets.
    */
   preload() {
-    console.log("Splash Scene")
+    console.log("Splash Scene");
   }
 
   /**
@@ -40,18 +41,18 @@ class SplashScene extends Phaser.Scene {
    * @param {object} data - Any data passed via ScenePlugin.add() or ScenePlugin.start().
    */
   create(data) {
-    // pass
+    pass;
   }
 
   /**
    * Should be overridden by your own Scenes.
    * This method is called once per game step while the scene is running.
-   * @param {number} time The current time.
+   * @param {number} time - The current time.
    * @param {number} delta - The delta time in ms since the last frame.
    */
   update(time, delta) {
-    // pass
+    this.scene.switch("titleScene");
   }
 }
 
-export default SplashScene
+export default SplashScene;
