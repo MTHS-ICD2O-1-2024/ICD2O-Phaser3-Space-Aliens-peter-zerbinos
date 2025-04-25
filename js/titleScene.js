@@ -41,7 +41,7 @@ class TitleScene extends Phaser.Scene {
      * @param {object} data - Any data passed via ScenePlugin.add() or ScenePlugin.start().
      */
     create(data) {
-      pass;
+      // pass;
     }
   
     /**
@@ -51,7 +51,7 @@ class TitleScene extends Phaser.Scene {
      * @param {number} delta - The delta time in ms since the last frame.
      */
     update(time, delta) {
-      pass;
+      // pass;
     }
   }
   
