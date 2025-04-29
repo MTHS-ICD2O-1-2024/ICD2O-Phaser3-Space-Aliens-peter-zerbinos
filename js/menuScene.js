@@ -2,32 +2,26 @@
 
 // Created by: Peter Zerbinos
 // Created on: Apr 2025
-// This is the Title Scene
+// This is the Splash Scene
 
 /**
- * This class is the Title Scene.
+ * This class is the Splash Scene.
  */
-class TitleScene extends Phaser.Scene {
+class SplashScene extends Phaser.Scene {
   /**
    * This method is the constructor.
    */
   constructor() {
-leScene" })
+    super({ key: "splashScene" })
 
-    this.titleSceneBackgroundImage = null
-    this.titleSceneText = null
-    this.titleSceneTextStyle = {
-      font: "200px Times",
-      fill: "#fde4b9",
-      align: "center",
-    }
+    this.splashSceneBackgroundImage = null
   }
 
   /**
    * Can be defined on your own Scenes.
    * This method is called by the Scene Manager when the scene starts,
-   *  before preload () and create ().
-   * @param {object} data - Any data passed via ScenePlugin.add() or ScenePlugin.start().
+   * before preload() and create().
+   * @param {object} data Any data passed via ScenePlugin.add() or ScenePlugin.start().
    */
   init(data) {
     this.cameras.main.setBackgroundColor("#ffffff")
@@ -38,8 +32,8 @@ leScene" })
    * Use it to load assets.
    */
   preload() {
-    console.log("Title Scene")
-    this.load.image("titleSceneBackground", "assets/aliens_screen_image.jpg")
+    console.log("Splash Scene")
+    this.load.image("splashSceneBackground", "./assets/splashSceneImage.png")
   }
 
   /**
@@ -48,15 +42,13 @@ leScene" })
    * @param {object} data Any data passed via ScenePlugin.add() or ScenePlugin.start().
    */
   create(data) {
-    this.titleSceneBackgroundImage = this.add
-      .sprite(0, 0, "titleSceneBackground")
-      .setScale(2.75)
-    this.titleSceneBackgroundImage.x = 1920 / 2
-    this.titleSceneBackgroundImage.y = 1080 / 2
-
-    this.titleSceneText = this.add
-      .text(1920 / 2, 1080 / 2 + 350, "Space Aliens", this.titleSceneTextStyle)
-      .setOrigin(0.5)
+    this.splashSceneBackgroundImage = this.add.sprite(
+      0,
+      0,
+      "splashSceneBackground"
+    )
+    this.splashSceneBackgroundImage.x = 1920 / 2
+    this.splashSceneBackgroundImage.y = 1080 / 2
   }
 
   /**
@@ -66,8 +58,10 @@ leScene" })
    * @param {number} delta The delta time in ms since the last frame.
    */
   update(time, delta) {
-    // pass
+    if (time > 3000) {
+      this.scene.switch("titleScene")
+    }
   }
 }
 
-export default TitleScene
+export default SplashScene
