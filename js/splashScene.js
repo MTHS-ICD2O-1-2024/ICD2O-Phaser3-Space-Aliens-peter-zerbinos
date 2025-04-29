@@ -1,7 +1,5 @@
 /* global Phaser */
 
-// Copyright (c) 2020 Mr. Coxall All rights reserved
-//
 // Created by: Peter Zerbinos
 // Created on: Apr 2025
 // This is the Splash Scene
