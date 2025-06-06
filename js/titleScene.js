@@ -1,7 +1,7 @@
 /* global Phaser */
 
 // Created by: Peter Zerbinos
-// Created on: Apr 2025
+// Created on: June 2025
 // This is the Title Scene
 
 /**
@@ -11,15 +11,15 @@ class TitleScene extends Phaser.Scene {
   /**
    * This method is the constructor.
    */
-  constructor() {
-leScene" })
+  constructor () {
+    super({ key: 'titleScene' })
 
     this.titleSceneBackgroundImage = null
     this.titleSceneText = null
     this.titleSceneTextStyle = {
-      font: "200px Times",
-      fill: "#fde4b9",
-      align: "center",
+      font: '200px Times',
+      fill: '#fde4b9',
+      align: 'center'
     }
   }
 
@@ -29,17 +29,17 @@ leScene" })
    *  before preload () and create ().
    * @param {object} data - Any data passed via ScenePlugin.add() or ScenePlugin.start().
    */
-  init(data) {
-    this.cameras.main.setBackgroundColor("#ffffff")
+  init (data) {
+    this.cameras.main.setBackgroundColor('#ffffff')
   }
 
   /**
    * Can be defined on your own Scenes.
    * Use it to load assets.
    */
-  preload() {
-    console.log("Title Scene")
-    this.load.image("titleSceneBackground", "assets/aliens_screen_image.jpg")
+  preload () {
+    console.log('Title Scene')
+    this.load.image('titleSceneBackground', 'assets/aliens_screen_image.jpg')
   }
 
   /**
@@ -47,16 +47,12 @@ leScene" })
    * Use it to create your game objects.
    * @param {object} data Any data passed via ScenePlugin.add() or ScenePlugin.start().
    */
-  create(data) {
-    this.titleSceneBackgroundImage = this.add
-      .sprite(0, 0, "titleSceneBackground")
-      .setScale(2.75)
+  create (data) {
+    this.titleSceneBackgroundImage = this.add.sprite(0, 0, 'titleSceneBackground').setScale(2.75)
     this.titleSceneBackgroundImage.x = 1920 / 2
     this.titleSceneBackgroundImage.y = 1080 / 2
 
-    this.titleSceneText = this.add
-      .text(1920 / 2, 1080 / 2 + 350, "Space Aliens", this.titleSceneTextStyle)
-      .setOrigin(0.5)
+    this.titleSceneText = this.add.text(1920 / 2, 1080 / 2 + 350, 'Space Aliens', this.titleSceneTextStyle).setOrigin(0.5)
   }
 
   /**
@@ -65,7 +61,7 @@ leScene" })
    * @param {number} time The current time.
    * @param {number} delta The delta time in ms since the last frame.
    */
-  update(time, delta) {
+  update (time, delta) {
     // pass
   }
 }

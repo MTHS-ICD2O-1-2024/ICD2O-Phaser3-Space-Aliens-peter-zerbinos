@@ -1,39 +1,36 @@
 /* global Phaser */
 
 // Created by: Peter Zerbinos
-// Created on: Apr 2025
-// This is the Splash Scene
+// Created on: June 2025
+// This is the Menu Scene
 
 /**
- * This class is the Splash Scene.
+ * This class is the Menu Scene.
  */
-class SplashScene extends Phaser.Scene {
+class MenuScene extends Phaser.Scene {
   /**
    * This method is the constructor.
    */
-  constructor() {
-    super({ key: "splashScene" })
-
-    this.splashSceneBackgroundImage = null
+  constructor () {
+    super({ key: 'menuScene' })
   }
 
   /**
    * Can be defined on your own Scenes.
    * This method is called by the Scene Manager when the scene starts,
-   * before preload() and create().
-   * @param {object} data Any data passed via ScenePlugin.add() or ScenePlugin.start().
+   *  before preload () and create ().
+   * @param {object} data - Any data passed via ScenePlugin.add() or ScenePlugin.start().
    */
-  init(data) {
-    this.cameras.main.setBackgroundColor("#ffffff")
+  init (data) {
+    this.cameras.main.setBackgroundColor('#ffffff')
   }
 
   /**
    * Can be defined on your own Scenes.
    * Use it to load assets.
    */
-  preload() {
-    console.log("Splash Scene")
-    this.load.image("splashSceneBackground", "./assets/splashSceneImage.png")
+  preload () {
+    console.log('Menu Scene')
   }
 
   /**
@@ -41,14 +38,8 @@ class SplashScene extends Phaser.Scene {
    * Use it to create your game objects.
    * @param {object} data Any data passed via ScenePlugin.add() or ScenePlugin.start().
    */
-  create(data) {
-    this.splashSceneBackgroundImage = this.add.sprite(
-      0,
-      0,
-      "splashSceneBackground"
-    )
-    this.splashSceneBackgroundImage.x = 1920 / 2
-    this.splashSceneBackgroundImage.y = 1080 / 2
+  create (data) {
+    // pass
   }
 
   /**
@@ -57,11 +48,9 @@ class SplashScene extends Phaser.Scene {
    * @param {number} time The current time.
    * @param {number} delta The delta time in ms since the last frame.
    */
-  update(time, delta) {
-    if (time > 3000) {
-      this.scene.switch("titleScene")
-    }
+  update (time, delta) {
+    // pass
   }
 }
 
-export default SplashScene
+export default MenuScene
