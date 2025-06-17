@@ -10,7 +10,7 @@ This site can be found at: [https://MTHS-ICD2O-1-2024.github.io/ICD2O-Phaser3-Sp
 
 ---
 
-**NOTES ON INITIAL LOAD:**
+**NOTES ON THE INITIAL LOAD:**
 - remember to goto on the menu bar:
   - File
   - Go to Repository
